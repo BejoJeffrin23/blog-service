@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="row" *ngIf="onepokemon">
+      <div class="col-md-12">
+        <h2 id="mystyle">{{onepokemon.name|uppercase}}</h2>
+        <small>Id number {{onepokemon.id}}</small>
+        <br>
+        <span *ngFor="let onetype of onepokemon.type;let first=first;let last=last">Category -{{onetype}}{{last?'.':' ,'}}</span>
+        <div class="card"><img src="{{onepokemon.sprite}}" class="img-fluid"></div>
+      </div>
+    </div>
+    <hr>
+    <div class="row" *ngIf="onepokemon">
+      <div class="col-md-4">
+        <a class="btn btn-primary" [routerLink]="['/edit',onepokemon.id]">edit</a>
+   
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-danger" >delete</a>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-warning">go back</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
